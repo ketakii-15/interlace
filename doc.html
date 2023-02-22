@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="./web/interlace-doc.css" />
     <link rel="stylesheet" type="text/css" href="./components/interlace/interlace.css">
 
+    
+    
   </head>
   <body>
     <div class="doc__bg"></div>
@@ -98,7 +100,19 @@
         <section class="js-section">
           <h3 class="section__title">Buttons</h3>
           <br>
+<label for="site-search">Search anything:</label>
+<input type="search" id="site-search" name="q">
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
 
+input,
+label {
+    margin: 0.4rem 0;
+}
+
+<button>Search</button>
           <h4>1. Simple Button</h4>
           <p>
             To change the button to square border, you can use the following code in your HTML:
@@ -238,9 +252,35 @@
                   </code>
                 </pre>
                 <button class="swap-color-hover">swap color hover</button>
+                
+                
+                
+                
+                
+                
+                   <h4>11. Setting the disabled attribute</h4>
+              <p>
+             You can enable and disable buttons at run time by setting disabled to true or false.
+                In this example our button starts off enabled, but if you press it, it is disabled using button.disabled = true. 
+              </p>
+              <input type="button" value="Enabled" />
+                const button = document.querySelector('input');
 
-          <hr />
+                          button.addEventListener('click', disableButton);
+
+                               function disableButton() {
+                                button.disabled = true;
+                                 button.value = 'Disabled';
+                                     setTimeout(() => {
+                                      button.disabled = false;
+                                      button.value = 'Enabled';
+                                              }, 2000);
+                          }
+
+
         </section>
+                
+                
 
         <!--
         <section class="js-section">
